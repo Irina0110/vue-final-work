@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <nav>
+    <main-page :menu-links="links" />
+  </nav>
+  <router-view/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  import MainPage from "@/components/mainPage";
+  export default {
+    components: {MainPage},
+    data(){
+      return {
+        links: [
+          {title: "1 step", href:"/first"},
+          {title: "2 step", href:"/second"},
+          {title: "3 step", href:"/third"},
+          {title: "4 step", href:"/fourth"},
+          {title: "5 step", href:"/fifth"},
+          {title: "Final", href:"/final"},
+        ],
+        titleTask: '',
+        descriptionTask: '',
+        members: [],
+        timeTask: null,
+        apps: []
+      }
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
