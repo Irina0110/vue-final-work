@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import mainPage from "@/components/mainPage";
 import firstStep from "../views/firstStep";
 import secondStep from "../views/secondStep";
 import thirdStep from "../views/thirdStep";
@@ -10,11 +9,6 @@ import finalPage from "@/views/finalPage";
 const routes = [
   {
     path: '/',
-    name: 'main',
-    component: mainPage
-  },
-  {
-    path: '/first',
     name: 'first',
     component: firstStep
   },
